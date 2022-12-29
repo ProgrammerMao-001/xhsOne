@@ -69,6 +69,6 @@ backTop.onclick = function() {
 
 function jumpToSousuo(name) {
 	console.log(name);
-	// location.pathname = '/xhsOne/page/sousuo.html?name =' + name;
 	window.location.href = `/xhsOne/page/sousuo.html?name = ${name}`
+	// window.location.href = `/xhsOne/page/sousuo.html?{name: ${name}}`
 }
