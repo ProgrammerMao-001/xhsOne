@@ -1,10 +1,666 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>私人定制-绿野活动</title>
+		<style>
+			span.error-style {
+				margin-left: 5px;
+				color: red;
+			}
+		</style>
+		<link href="https://www.lvye.cn/tools/js/DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://www.lvye.cn/res/js/layer/skin/default/layer.css"
+			id="layuicss-skinlayercss">
+		<style>
+			hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__ {
+				border: 1px dotted
+			}
+		</style>
+
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" href="../css/header.css">
+		<link rel="stylesheet" href="../css/swiper.css">
+		<link rel="stylesheet" href="../css/right.css">
+		<link rel="stylesheet" href="../css/footer.css">
+		<link rel="stylesheet" href="../css/layer.css">
+		<link rel="stylesheet" href="../css/pageCss/customize.css">
+		<link rel="stylesheet" href="../css/pageCss/skin.css">
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
 	</head>
 	<body>
-		123456
+		<!--顶部广告-->
+		<div class="header-top">
+			<div class="wm-1200">
+				<div class="login-info">
+					<div class="login-before">您好，请<a class="lgn-link" href="">登录</a><a class="reg-link" href="">立即注册</a>
+					</div>
+				</div>
+				<!-- user 入口 -->
+				<div class="notice-msg clearfix">
+					<p><span style="color:#808080">玩户外，上绿野，要旅行，上绿野，绿野引领，健康新生活！</span></p>
+				</div>
+				<!-- 网站公告 -->
+				<ul class="top-msg-group">
+					<li class="nav-item">
+						<a class="dd" href=""><i></i>订单查询</a>
+					</li>
+					<li class="nav-item has-down">
+						网站地图
+						<i class="top-arrow-icon"></i>
+						<div class="dropdown-panel">
+							<ul class="top-map-list clearfix">
+								<li> <a href="" title="">精选活动</a></li>
+								<li> <a href="" title="">培训</a></li>
+								<li> <a href="" title="">户外保险</a></li>
+								<li> <a href="" title="">团建定制</a></li>
+								<li> <a href="" title="">绿野论坛</a></li>
+								<li> <a href="" title="">AA约伴</a></li>
+								<li> <a href="" title="">户外资讯</a></li>
+								<li> <a href="" title="">商家入驻</a></li>
+
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="message top-new-msg" href=""></a>
+					</li>
+					<li class="nav-item has-down">
+						<span class="top-wechat-icon"></span>
+						<div class="dropdown-panel">
+							<div class="top-qr-code">
+								<img src="https://www.lvye.cn/uploads/2022/0608/9b1d7b7a889a5b804ea3b4b11cf11647_94x94.png"
+									width="100" height="100">
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- 信息提示 -->
+			</div>
+		</div>
+		<!-- 顶部信息栏 -->
+		<div class="header-search">
+			<div class="wm-1200">
+				<div class="header-logo">
+					<a title="绿野户外" href=""><img
+							src="https://www.lvye.cn/uploads/2022/0519/9bb1071df140e9c1e0042ceacd77d882.png"
+							alt="logo"></a>
+				</div>
+				<!-- logo -->
+				<!-- 城市切换 -->
+				<div class="search-area-bar">
+					<div class="search-term">
+						<span class="current-item" id="currentItemVal" data-pinyin="line">精选活动<i></i></span>
+						<i class="arrow-icon"></i>
+						<ul class="search-down-select hide searchmodel" id="searchDownSelect" style="display: none;">
+							<li data-pinyin="line">精选活动</li>
+							<li data-pinyin="general/peixun">培训</li>
+						</ul>
+					</div>
+					<input type="text" class="top-search-ipt searchkeyword" id="topSearchIpt" name="" value=""
+						placeholder="">
+					<button type="button" class="top-search-btn" id="st-btn" name="">搜 索</button>
+					<div class="top-search-tag" id="topSearchTag">
+						<a href="javascript:;" class="label" data-keyword=""></a>
+
+					</div>
+					<div class="st-hot-dest-box" id="stHotDestBox" style="display: none;">
+						<div class="block-nr" id="close-ico">
+							<dl>
+								<dt>热搜词</dt>
+								<dd class="clearfix">
+									<a class="hot_search_key" href="javascript:;" data-keyword=""></a>
+
+								</dd>
+							</dl>
+							<dl>
+								<dt>目的地</dt>
+								<dd class="clearfix">
+
+								</dd>
+							</dl>
+						</div>
+					</div>
+
+				</div>
+				<!-- 搜索栏 -->
+				<div class="header-contact">
+					<div class="tit">客户服务电话<i class="arrow-icon"></i></div>
+					<div class="num">400-110-2086</div>
+					<div class="more-box">
+						<span class="item">400-110-2086</span>
+					</div>
+				</div>
+				<!-- 联系方式 -->
+			</div>
+		</div>
+		<!-- 顶部搜索 -->
+		<div class="header-nav">
+			<div class="wm-1200">
+				<div class="header-menu">
+					<ul class="menu-group clearfix">
+						<li class=""><a href="../index.html">首页</a></li>
+						<li class="nav_header_1">
+							<a href="" title="精选活动">
+								精选活动 </a>
+						</li>
+						<li class="nav_header_202">
+							<a href="" title="培训">
+								培训 </a>
+						</li>
+						<li class="nav_header_">
+							<a href="" title="户外保险">
+								户外保险 </a>
+						</li>
+						<li class="nav_header_14 active">
+							<a href="" title="团建定制">
+								团建定制 </a>
+						</li>
+						<li class="nav_header_">
+							<a href="" title="绿野论坛">
+								绿野论坛 </a>
+						</li>
+						<li class="nav_header_">
+							<a href="" title="AA约伴">
+								AA约伴 </a>
+						</li>
+						<li class="nav_header_">
+							<a href="" title="户外资讯">
+								户外资讯 </a>
+						</li>
+						<li class="nav_header_">
+							<a href="" title="商家入驻">
+								商家入驻 </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 主导航 -->
+		<div class="dz-banner-box">
+			<a href="javascript:;" target=""><img
+					src="https://www.lvye.cn/plugins/customize/public/images/siren-dz-banner.png"></a>
+		</div><!-- banner -->
+		<div class="big bg-grey-f5">
+			<div class="wm-1200">
+				<div class="custom-content">
+					<form id="cusfrm" method="post" action="/customize/ajax_save" novalidate="novalidate">
+						<div class="custom-bt">
+							<h3>我要定制</h3>
+							<p>为更好的了解您的旅行计划，为您提供完美的定制服务，请完善以下资料</p>
+						</div>
+						<div class="custom-block">
+							<h3>您的旅行计划</h3>
+							<div class="block-content">
+								<ul class="clearfix">
+									<li class="half-li">
+										<em class="item">目的地：</em>
+										<div class="con"><input type="text" class="custom-default-text w270"
+												name="dest"></div>
+									</li>
+									<li class="half-li">
+										<em class="item">出游天数：</em>
+										<div class="con">
+											<span class="amount-opt-wrap">
+												<a href="javascript:;" class="sub-btn">–</a>
+												<input type="text" class="num-text" name="days" maxlength="4" value="1">
+												<a href="javascript:;" class="add-btn">+</a>
+											</span>
+										</div>
+									</li>
+									<li class="half-li">
+										<em class="item">出发时间：</em>
+										<div class="con"><input type="text" class="custom-default-text w270"
+												id="starttime" name="starttime"></div>
+									</li>
+									<li class="half-li">
+										<em class="item">成人数：</em>
+										<div class="con">
+											<span class="amount-opt-wrap">
+												<a href="javascript:;" class="sub-btn">–</a>
+												<input type="text" class="num-text" name="adultnum" maxlength="4"
+													value="1">
+												<a href="javascript:;" class="add-btn">+</a>
+											</span>
+										</div>
+									</li>
+									<li class="half-li">
+										<em class="item">出发地：</em>
+										<div class="con"><input type="text" name="startplace"
+												class="custom-default-text w270"></div>
+									</li>
+									<li class="half-li">
+										<em class="item">儿童数：</em>
+										<div class="con">
+											<span class="amount-opt-wrap">
+												<a href="javascript:;" class="sub-btn">–</a>
+												<input type="text" class="num-text" name="childnum" maxlength="4"
+													value="0">
+												<a href="javascript:;" class="add-btn">+</a>
+											</span>
+										</div>
+									</li>
+									<li class="full-li">
+										<em class="item">其它需求：</em>
+										<div class="con">
+											<textarea name="content" class="default-textarea"></textarea>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="custom-block">
+							<h3>您的联系方式</h3>
+							<div class="block-content">
+								<ul class="clearfix">
+									<li class="half-li">
+										<em class="item">您的称呼：</em>
+										<div class="con"><input type="text" class="custom-default-text w270"
+												name="contactname"></div>
+									</li>
+									<li class="half-li">
+										<em class="item">性别：</em>
+										<div class="con">
+											<input type="hidden" name="sex" value="先生">
+											<a class="custom-child-item cc-active" href="javascript:;">先生</a>
+											<a class="custom-child-item" href="javascript:;">女士</a>
+										</div>
+									</li>
+									<li class="half-li">
+										<em class="item">联系电话：</em>
+										<div class="con"><input type="text" class="custom-default-text w270"
+												name="phone"></div>
+									</li>
+									<li class="half-li">
+										<em class="item">电子邮箱：</em>
+										<div class="con"><input type="text" class="custom-default-text w270"
+												name="email"></div>
+									</li>
+									<!--                            <li class="full-li">-->
+									<!--                                <em class="item">所在地点：</em>-->
+									<!--                                <div class="con"><input type="text" class="custom-default-text w790" name="address"/></div>-->
+									<!--                            </li>-->
+									<li class="full-li">
+										<em class="item">合适的联系时间：</em>
+										<div class="con">
+											<input type="hidden" name="contacttime" value="9：00-12：00">
+											<a class="custom-child-item cc-active" href="javascript:;">9：00-12：00</a>
+											<a class="custom-child-item" href="javascript:;">14：00-18：00</a>
+											<a class="custom-child-item" href="javascript:;">19：00-22：00</a>
+										</div>
+									</li>
+									<li class="full-li">
+										<em class="item">验证码：</em>
+										<div class="con">
+											<input type="text" name="captcha" class="custom-default-text">
+											<img class="yzm-img" src="https://www.lvye.cn/captcha"
+												onclick="this.src=this.src+'?math='+ Math.random()">
+											<span id="captcha_error" class="error-msg"
+												style="display: none">验证码错误</span>
+										</div>
+									</li>
+								</ul>
+								<div class="custom-submit-block"><a href="javascript:;" class="custom-submit-btn"
+										id="submit_btn">提交订单</a></div>
+							</div>
+						</div>
+						<input type="hidden" name="frmcode" value="fad8c971b46c45b80cf8cbac5ca6cbf0">
+					</form>
+				</div>
+				<!--栏目介绍-->
+				<div class="custom-case">
+					<h3 class="case-tit">优秀定制方案</h3>
+					<div class="slide-case">
+						<div class="slide-bd">
+							<div class="tempWrap" style="overflow:hidden; position:relative; width:1220px">
+								<ul class="clearfix" style="left: 0px; position: relative; padding: 0px; margin: 0px;">
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0814/cc7a5cbae63b49c4ef075fd754958fa2_285x143.png"
+													alt="企业精英戈壁挑战赛" style="display: inline;"></div>
+											<div class="bt">企业精英戈壁挑战赛</div>
+											<div class="info">
+												<span>目的地：戈壁挑战赛</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：5天</span>
+												<span class="fr">浏览：1623</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0814/ee4c98c31774ed2259a3b450e3e2b0ee_285x143.png"
+													alt="怀柔黄花城2日1晚特色团建活动" style="display: inline;"></div>
+											<div class="bt">怀柔黄花城2日1晚特色团建活动</div>
+											<div class="info">
+												<span>目的地：怀柔</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：2天</span>
+												<span class="fr">浏览：1906</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0811/81a82cb583d923d9b8be80d2a5eecfeb_285x143.png"
+													alt="北戴河3日2晚特色团建" style="display: inline;"></div>
+											<div class="bt">北戴河3日2晚特色团建</div>
+											<div class="info">
+												<span>目的地：海边</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：3天</span>
+												<span class="fr">浏览：1588</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0811/3dc37b7c3b23b1ae1c78a50d808aead3_285x143.png"
+													alt="坝上草原3日2晚特色团建活动" style="display: inline;"></div>
+											<div class="bt">坝上草原3日2晚特色团建活动</div>
+											<div class="info">
+												<span>目的地：草原</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：3天</span>
+												<span class="fr">浏览：1419</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0806/0599bd1e61f5fc8def849f2f1030619b_285x143.png"
+													alt="野外探寻之草原迷踪" style="display: inline;"></div>
+											<div class="bt">野外探寻之草原迷踪</div>
+											<div class="info">
+												<span>目的地：草原</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：4天</span>
+												<span class="fr">浏览：1227</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0806/09251dd47b75cfaba25a0ebad21d7791_285x143.png"
+													alt="野外探寻之沙漠追击" style="display: inline;"></div>
+											<div class="bt">野外探寻之沙漠追击</div>
+											<div class="info">
+												<span>目的地：沙漠</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：4天</span>
+												<span class="fr">浏览：1293</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0805/7a8bd9f4aabc2b440ff99ab82f0d2d2e_285x143.png"
+													alt="野外探寻之荒岛求生" style="display: inline;"></div>
+											<div class="bt">野外探寻之荒岛求生</div>
+											<div class="info">
+												<span>目的地：荒岛</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：4天</span>
+												<span class="fr">浏览：1387</span>
+											</div>
+										</a>
+									</li>
+									<li style="float: left; width: 285px;">
+										<a class="con" href="" target="_blank">
+											<div class="pic"><img
+													src="https://www.lvye.cn/uploads/2020/0805/e96c13d09a66c301c309d2e58a8e7c3d_285x143.png"
+													alt="野外探寻之生命之泉" style="display: inline;"></div>
+											<div class="bt">野外探寻之生命之泉</div>
+											<div class="info">
+												<span>目的地：山林</span>
+											</div>
+											<div class="info clearfix">
+												<span class="fl">行程天数：4天</span>
+												<span class="fr">浏览：1265</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<link href="/usertpl/ll_tk11257_pc_no296_index/css/footer.css" rel="stylesheet" media="screen" type="text/css">
+		<link type="text/css" href="/res/css/skin.css" rel="stylesheet">
+		<div class="big st-brand">
+			<div class="wm-1200">
+				<ul class="brand-list">
+					<li class="item"><i class="icon1"></i>价格公正，安心购买</li>
+					<li class="item"><i class="icon2"></i>品质保证，放心出行</li>
+					<li class="item"><i class="icon3"></i>产品丰富，一站式服务</li>
+					<li class="item last"><i class="icon4"></i>专业顾问，24小时客服</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="st-help clear">
+			<div class="wm-1200">
+				<div class="help-lsit clearfix">
+					<div class="contact-us">
+						<i class="icon"></i>
+						<div class="txt">24小时服务热线<br><span class="num">400-110-2086</span></div>
+					</div>
+					<dl>
+						<dt><a href="">关于我们</a></dt>
+						<dd>
+							<a href="" target="_blank" rel="nofollow">关于绿野</a>
+							<a href="" target="_blank" rel="nofollow">联系我们</a>
+							<a href="" target="_blank" rel="nofollow">绿野百科</a>
+
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">APP下载</a></dt>
+						<dd>
+							<a href="" target="_blank" rel="nofollow">绿野APP</a>
+							<a href="" target="_blank" rel="nofollow">六只脚APP</a>
+
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">会员服务</a></dt>
+						<dd>
+							<a href="" target="_blank" rel="nofollow">会员协议</a>
+							<a href="" target="_blank" rel="nofollow">会员等级</a>
+
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="">帮助中心</a></dt>
+						<dd>
+							<a href="" target="_blank" rel="nofollow">天气查询</a>
+							<a href="" target="_blank" rel="nofollow">外汇牌价</a>
+
+						</dd>
+					</dl>
+
+					<div class="st-wechat">
+						<img src="https://www.lvye.cn/uploads/2022/0608/9b1d7b7a889a5b804ea3b4b11cf11647_94x94.png"
+							width="100" height="100">
+						<span>微信扫一扫，更优惠！</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 帮助 -->
+		<!-- 帮助 -->
+		<!-- 友情链接 -->
+		<div class="st-footer">
+			<div class="wm-1200">
+				<div class="st-foot-menu">
+
+				</div>
+				<!--底部导航-->
+				<div class="st-foot-edit">
+					<p> </p>
+					<div class="foot_con">
+						<p><span style="color: rgb(255, 255, 255);">京ICP备19050212号-2&nbsp; &nbsp;
+								增值电信业务经营许可证：京B2-20201144</span></p>
+						<p><span style="color: rgb(255, 255, 255);">北京更嗨科技有限公司&nbsp; &nbsp; |&nbsp; &nbsp;
+								北京更嗨国际旅行社有限公司</span></p>
+						<p><span style="color: rgb(255, 255, 255);">全国统一客服电话：400-110-2086&nbsp; &nbsp;
+								旅游许可证编号：L-BJ-CJ00438</span></p>
+						<p><span style="color: rgb(255, 255, 255);">地址：北京市朝阳区惠新南里6号1幢8层803-805室</span></p>
+					</div>
+					<p></p>
+					<br>
+					<!--<img src="/Templets_NO296/images/pic/footer.png" alt="">-->
+				</div>
+				<!--网站底部介绍-->
+			</div>
+		</div>
+		<!-- 底部编辑 -->
+		<div class="content-fix-box hide" id="is_login_order">
+			<div class="login-small-box">
+				<div class="login-small-con">
+					<h3 class="tab-nav-bar">
+						<span class="item on" data-type="user_fast_login">账户密码登录</span>
+						<span class="item" data-type="mobile_fast_login">动态码登录</span>
+						<i class="close-btn"></i>
+					</h3>
+					<div class="tab-wrapper">
+						<form id="user_fast_login" method="post" novalidate="novalidate">
+							<div class="tab-item-box" style="display: block;">
+								<div class="user-name">
+									<input type="text" name="loginname" id="loginname" class="user-zh"
+										placeholder="请输入手机号/邮箱">
+								</div>
+
+								<div class="user-password">
+									<input type="password" name="loginpwd" id="loginpwd" class="user-zh"
+										placeholder="请输入登录密码">
+								</div>
+							</div>
+						</form>
+						<form id="mobile_fast_login" method="post" novalidate="novalidate">
+							<div class="tab-item-box">
+								<div class="user-phone">
+									<input type="text" class="user-zh" name="login_dialog_mobile"
+										id="login_dialog_mobile" placeholder="请输入手机号">
+								</div>
+
+								<div class="user-password user-num">
+									<input type="text" class="user-zh" name="sms_code" id="sms_code"
+										placeholder="请输入动态密码">
+									<span class="code" id="send_sms_code">获取动态码</span>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="login-error" style="display: none;"></div>
+					<div class="login-btn"><a href="javascript:;" id="login_order">登 录</a></div>
+					<div class="reg-find-acc">没有账号，<a href="/member/register">免费注册</a>
+						<a class="fr" href="">找回密码</a>
+					</div>
+				</div>
+				<div class="other-login">
+					<dl>
+						<dt><span>使用其他方式登录</span><em></em></dt>
+						<dd>
+							<a class="wx third-login" href="javascript:">wx</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="login-shadow" style="display: none;">
+			<div class="send-tip-box"><i class="icon"></i>动态密码已发送，15分钟有效</div>
+		</div>
+
+		<link type="text/css" href="/min/?f=/plugins/qq_kefu/public/kf1/css/right.css" rel="stylesheet">
+
+		<link type="text/css" href="/res/js/layer/skin/layer.css" rel="stylesheet">
+
+		<style>
+			.st-kfBox {
+				width: 125px;
+				position: fixed;
+				right: 30px;
+				top: 50%;
+				border-radius: 5px;
+				box-shadow: 3px 3px 9px rgba(0, 0, 0, .25), -3px -3px 9px rgba(0, 0, 0, .25);
+				background: #fff;
+				z-index: 99999
+			}
+		</style>
+
+		<div class="st-kfBox" style="top: 464.5px;">
+			<div class="online-tit"><span>在线咨询</span><i id="kf-close"></i></div>
+			<ul class="kf-menuList">
+				<li style="display:none;">
+					<div class="show-lm"
+						onclick="window.open('http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes','_blank')">
+						<i class="ico01"></i>
+					</div>
+				</li>
+				<li style="display:none;">
+					<div class="show-lm"
+						onclick="window.open('http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes','_blank')">
+						<i class="ico02"></i>
+					</div>
+				</li>
+				<li style="display:none;">
+					<div class="show-lm"><i class="ico03"></i>免费通话</div>
+					<div class="show-con">
+						<div class="toll-freeCall">
+							<input type="text" class="num-text" id="freekefu_phone" placeholder="请输入您的电话号码">
+							<input type="button" class="call-btn" id="freekefu_btn" value="立即免费通话">
+							<div class="txtCon">输入电话号码，点击免费通话、稍后我们将与您联系，此次通话将不收取您任何费用，请注意接听。</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="show-lm"><i class="ico05"></i>客服电话</div>
+					<div class="show-con">
+						<p class="phone-num">400-110-2086</p>
+					</div>
+				</li>
+				<li>
+					<div class="show-lm"><i class="ico04"></i>官方微信</div>
+					<div class="show-con">
+						<p class="wechat-pic"><img
+								src="https://image1-oss.v.lvye.com//uploads/2022/0608/9b1d7b7a889a5b804ea3b4b11cf11647.png">
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="kf-backTop" id="kf-backTop"><i></i>返回顶部</div>
+		</div>
+		<div class="sm-kfBox" style="right: 30px; top: 464.5px;">
+			<ul class="clearfix">
+				<li class="sm-showKf"><img src="/plugins/qq_kefu/public/kf1/images/point.gif"
+						style="    height: 30%;width: 30%;"></li>
+				<li class="sm-backTop" id="sm-backTop"></li>
+			</ul>
+		</div>
+		<div style="position: absolute; z-index: 19700; top: -1970px; left: -1970px;"><iframe
+				style="width: 186px; height: 198px;" src="https://www.lvye.cn/tools/js/DatePicker/My97DatePicker.htm"
+				frameborder="0" border="0" scrolling="no"></iframe></div>
 	</body>
+	<div style="all: initial;">
+		<div id="__hcfy__" style="all: initial;"></div>
+	</div>
 </html>
+<script type="text/javascript" src="../js/index.js"></script>
