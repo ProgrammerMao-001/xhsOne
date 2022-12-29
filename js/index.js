@@ -66,3 +66,9 @@ var backTop = document.getElementById('kf-backTop');
 backTop.onclick = function() {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
+
+function jumpToSousuo(name) {
+	console.log(name);
+	console.log();
+	location.pathname = '/xhsOne/page/sousuo.html'
+}
